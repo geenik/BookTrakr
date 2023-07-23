@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "723145510711",
+    "project_id": "booktrakr",
+    "storage_bucket": "booktrakr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723145510711:android:af93e7edda4ca1358614b2",
+        "android_client_info": {
+          "package_name": "com.example.booktrakr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723145510711-o6o84i69qmjafbqbmknfa62080oeclnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM1wAfVT8x1A4dPf2UAP6eUOEGku0NgCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723145510711-o6o84i69qmjafbqbmknfa62080oeclnd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
