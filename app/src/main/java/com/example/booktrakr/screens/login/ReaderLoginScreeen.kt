@@ -42,10 +42,12 @@ import com.example.booktrakr.components.EmailInput
 import com.example.booktrakr.components.PasswordInput
 import com.example.booktrakr.components.ReaderLogo
 import com.example.booktrakr.navigation.ReaderScreens
+import com.google.firebase.auth.FirebaseAuth
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun LoginScreen(navController: NavController, viewModel: LoginViewModel= androidx.lifecycle.viewmodel.compose.viewModel()) {
+
     val showLoginForm= rememberSaveable {
         mutableStateOf(true)
     }
