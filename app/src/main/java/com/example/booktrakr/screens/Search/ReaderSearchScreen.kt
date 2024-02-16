@@ -61,7 +61,9 @@ fun SearchScreen(navController: NavController,viewModel: BooksSearchViewModel= h
             navController.navigate(ReaderScreens.ReaderHomeScreen.name)
         }
     }) {
-        Surface(modifier=Modifier.padding(it).fillMaxWidth()) {
+        Surface(modifier= Modifier
+            .padding(it)
+            .fillMaxWidth()) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 SearchForm(
                     modifier = Modifier
@@ -146,11 +148,12 @@ fun BookRow(book: Item, navController: NavController) {
         ) {
 
             val imageUrl =
-                if(book.volumeInfo.imageLinks.smallThumbnail.isEmpty()==true){
-                    "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=80"
-                }else{
-                    book.volumeInfo.imageLinks.smallThumbnail
-                }
+                    if(book.volumeInfo.imageLinks==null || book.volumeInfo.imageLinks.smallThumbnail.isEmpty()) {
+                        "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=80"
+                    } else {
+                        book.volumeInfo.imageLinks.smallThumbnail
+                    }
+
             Image(
                 painter = rememberImagePainter(data = imageUrl),
                 contentDescription = "book image",

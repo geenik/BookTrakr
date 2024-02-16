@@ -1,7 +1,9 @@
 package com.example.booktrakr.di
 
 import com.example.booktrakr.network.Booksapi
+import com.example.booktrakr.repository.FireRepository
 import com.example.booktrakr.utils.Constants
+import com.google.firebase.firestore.FirebaseFirestore
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,6 +15,12 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+    @Singleton
+    @Provides
+    fun provideFirebookRepository() =
+        FireRepository(queryBook = FirebaseFirestore.getInstance().collection("books"))
+
+
     @Singleton
     @Provides
     fun provideBookApi(): Booksapi {

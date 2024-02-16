@@ -46,8 +46,10 @@ fun SplashScreen(navController: NavController) {
                 }))
         delay(2000L)
         if(FirebaseAuth.getInstance().currentUser!=null){
+            navController.popBackStack()
             navController.navigate(ReaderScreens.ReaderHomeScreen.name)
         }else {
+            navController.popBackStack()
             navController.navigate(ReaderScreens.LoginScreen.name)
         }
     }
